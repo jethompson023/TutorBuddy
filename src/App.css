@@ -66,3 +66,16 @@ button{
   font-size: 15px;
   transition: 0.4s;
 }
+
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

@@ -1,4 +1,5 @@
 import './App.css';
+// import profile1 from "src/assets/profile-img/profile1.jpg";
 
 function App() {
   return (
@@ -13,13 +14,34 @@ function App() {
         <nav className="navbar">
           <h2 className='logo'>tutor<span>Buddy</span></h2>
           <u1>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Tutors</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Search</a></li>
+            <li><a href="./App.js">Home</a></li>
+            <li><a href="src/Tutor/tutor.js">Tutors</a></li>
+            <li><a href="#">Sessions</a></li>
+            <li><a href="#">Courses</a></li>
           </u1>
-          <button type="button">Sign In</button>
+          <button type="button">Sign Up</button>
         </nav>
+
+        <div className='calendar'>
+          
+
+        </div>
+        
+        {/* <div className='slide-container'>
+            <div className='slide-content'>
+                <div className='card-wrapper'>
+                    <div className='card'>
+                        <div className='image-content'>
+                            <span className='overlay'></span>
+                            <div className='card-image'>
+                                <img src="src/Tutor/profile-img/profile1.jpg" alt="" className='card-img'></img>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> */}
       </body>
     </div>
   );
