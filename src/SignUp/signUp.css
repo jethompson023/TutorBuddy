@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.link-home{
+  text-decoration: none;
+  margin-left: 0%;
+}
+
+body{
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  align-items: center;
+  background: linear-gradient(13deg, rgb(67, 124, 136), rgb(35, 206, 107));
+}
+
+.title{
+  transform: scale(1.1);
+  margin-left: 20%;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.logo{
+  color:antiquewhite;
+  font-size: 48px;
+}
+
+span{
+  color: rgb(90, 42, 39);
+}
+
+h6{
+  padding-right: 25%;
+  justify-content: space-between;
+  display: flex;
+  font-size: 15px;
+  color: #3b3d40;
+}
+
+form {
+  float: left;
+  margin: 10% 20% 10% 10%;
+  background: #fefeff;
+  position: relative;
+  padding: 20px;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px 0px grey;
+  width: 525px; 
+}
+
+form a {
+  margin-left: 30%;
+  text-decoration: none;
+  color: rgb(9, 35, 185);
+  font-size: 15px;
+  transition: 0.4s;  
+}
+
+.text-box-input {
+  border: none;
+  width: 100%;
+  background: #fefeff;
+  padding-left: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+button{
+  border: none;
+  background: rgb(90, 42, 39);
+  padding: 8px 30px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: rgb(77, 36, 34);
+  color: white;
+}
+
+button.googleSignin {
+  background: white;
+  width: 100%;
+  padding: 8px 30px;
+  border-radius: 0px;
+  color: black;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+footer {
+  height: 65px;
+  background: rgb(90, 42, 39);
+  color: antiquewhite;
+  padding: 15px;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    flex-direction: column;
+    margin-bottom: 65px;
+    align-items: center;
+  }
+
+  .title{
+    margin: 5% 28% -5% 28%;
+  }
+
+  form{
+    transform: scale(0.9);
+    margin-right: 10% 20% 10% 10%;
+  }
+
+  form a {
+    font-size: 15px;
+    margin: 35%
+  }
+}
