@@ -19,9 +19,7 @@ function App() {
             <li><a href="#">Sessions</a></li>
             <li><a href="#">Courses</a></li>
           </u1>
-          <button onclick="src/Forms/signUp.js">
-            Click Here
-          </button>
+          <button onclick="src/Forms/signUp.js">Click Here</button>
           {/* <button type="button"><li><a href="src/Forms/signUp.js"></a>Sign Up</li></button> */}
           {/* <li><a href="src/Forms/signUp.js"></a>Sign Up</li> */}
           {/* <button type="button"><></>Sign Up</button> */}
