@@ -79,3 +79,9 @@ button{
   object-fit: cover;
   border-radius: 50%;
 }
+
+#tutor-carousel{
+  background: #fff;
+	/* border-radius: 25px; */
+  border-radius: 10px 140px 30px 140px;
+}
