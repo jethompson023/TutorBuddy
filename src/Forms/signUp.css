@@ -14,16 +14,21 @@
 
 body{
   display:flex;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
   align-items: center;
-  background: linear-gradient(13deg, rgb(14, 177, 211), rgb(35, 206, 107));
-  margin-bottom: 60px;
+  background: linear-gradient(13deg, rgb(67, 124, 136), rgb(35, 206, 107));
 }
 
 .title{
   transform: scale(1.1);
   margin-left: 20%;
   position: relative;
+  margin-bottom: 60px;
 }
 
 .logo{
@@ -45,16 +50,14 @@ h6{
 
 form {
   float: left;
-  margin-left: 10%;
-  margin-top: 10%;
+  margin: 10% 20% 10% 10%;
   background: #fefeff;
   position: relative;
   padding: 20px;
   border-color: black;
   border-radius: 10px;
   box-shadow: 0px 0px 7px 0px grey;
-  width: 525px;
-  
+  width: 525px; 
 }
 
 form a {
@@ -110,7 +113,7 @@ button.googleSignin {
 }
 
 footer {
-  height: 80px;
+  height: 65px;
   background: rgb(90, 42, 39);
   color: antiquewhite;
   padding: 15px;
@@ -124,6 +127,8 @@ footer {
 @media screen and (max-width: 768px) {
   body{
     flex-direction: column;
+    margin-bottom: 65px;
+    align-items: center;
   }
 
   .title{
@@ -132,7 +137,7 @@ footer {
 
   form{
     transform: scale(0.9);
-    margin-right: 10%;
+    margin-right: 10% 20% 10% 10%;
   }
 
   form a {
