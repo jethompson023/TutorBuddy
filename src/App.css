@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  /*
+  
   --text-primary: #fill-color-here;
   --text-secondary: #fill-color-here;
   --bg-primary: #fill-color-here;
   --bg-secondary: #fill-color-here;
-  */
+ 
 }
 
 .App {
@@ -82,6 +82,6 @@ button{
 
 #tutor-carousel{
   background: #fff;
-	/* border-radius: 25px; */
+	border-radius: 25px;
   border-radius: 10px 140px 30px 140px;
-}
+} */

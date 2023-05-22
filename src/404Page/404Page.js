@@ -3,9 +3,9 @@ import './404Page.css';
 
 function NoPage() {
   return (
-    <div class="NoPageContainer">
-      <h1>404 Error: Page Not Found</h1>
-    </div>
+    <body className="NoPageContainer">
+      <h1 className="error-text">404 Error: Page Not Found</h1>
+    </body>
   );
 }
 
