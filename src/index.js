@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 // import App from './App';
-// import Home from './Home/home';
+import Home from './Home/HomePage';
 import SignUp from './Forms/signUp';
 import NoPage from './404Page/404Page';
 import Tutors from './Tutors/tutors';
@@ -13,9 +13,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-
-        <Route path="/" element={<SignUp />}/>
-        {/* <Route path="home" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="Forms" element={<SignUp />}/>
         <Route path="Tutors" element={<Tutors />} />
         <Route path="*" element={<NoPage />} />
 
