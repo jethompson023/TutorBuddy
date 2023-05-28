@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 function Tutor() {
   return (
-    <div className="container">
+    <div className="tutor-container">
         <head>
           <title>Tutor</title>
         </head>
 
         <body>
-            <h2>Something cool</h2>
+            <h2>Nothing to see here</h2>
         </body>
     </div>
   );

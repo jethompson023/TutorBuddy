@@ -23,7 +23,7 @@ function SignUp() {
             <input type="checkbox" name="remember-me"></input>
             <label> Remember Me </label>
             <br /><br />
-            <Link to="/Home"><button type="submit" className="general-button">Sign Up</button></Link>
+            <Link to="/"><button type="submit" className="general-button">Sign Up</button></Link>
             
             <div className="password-box"><Link to=""> <h1 className="link-password">Forgot Password?</h1></Link></div>
             <hr/>

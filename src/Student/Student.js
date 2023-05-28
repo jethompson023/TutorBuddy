@@ -1,4 +1,4 @@
-import '/workspaces/codespaces-react/src/Student/Student.css';
+import '/workspaces/TutorBuddy/src/Student/Student.css';
 
 function Student() {
   return (
