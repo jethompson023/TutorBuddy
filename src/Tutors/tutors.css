@@ -6,3 +6,105 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+.tutor-container {
+  /* height: 100vh; */
+  /* width: 100%; */
+  background: linear-gradient(13deg, rgb(14, 177, 211), rgb(35, 206, 107));
+  background-size: cover;
+  background-position: center;
+ }
+
+ .tutor-body{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* height: 100vh; */
+  background-size: cover;
+ }
+
+ .tutor-match-filter {
+  display: none;
+  position: absolute;
+  margin-top: 5px;
+}
+
+.tutor-match-card {
+  margin: 10px 0px;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tutor-img-container {
+  border-radius: 10px;
+  background-color: black;
+  position: relative;
+  height: 300px;
+  width: 250px;
+}
+
+img.tutor-image{
+  border-radius: 10px;
+  background-color: black;
+  position: absolute;
+  height: 300px;
+  width: 250px;
+}
+
+.tutor-card-bio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 5px;
+  width: 100%;
+  font-size: 13px;
+}
+
+.tutor-card-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.tutor-button-containers{
+  display: flex
+}
+
+.tutor-card-reject {
+  background-color: Red;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.tutor-card-accept {
+  background-color: green;
+  margin-top: 10px;
+  border-radius: 10px;
+  
+}
+
+.tutor-card-ratings{
+  background-color: grey;
+  width: 250px;
+  height: 75px;
+  position: absolute;
+}
+
+button.filter-tutor {
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+.users-tutor {
+  display: inline-block;
+  /* position: absolute; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
