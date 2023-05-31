@@ -5,15 +5,9 @@ import {Link} from "react-router-dom";
 function Home() {
  return (
    <div className="Home">
-     <body>
-      
-       {/* <main className="App-header">
-         <h1>Welcome to Tutor Buddy</h1>
-         <h3>So you can find a buddy so homework isn't funny</h3>
-       </main> */}
 
-
-       <nav className="navbar">
+     <header>
+      <nav className="navbar">
          <h2 className='logo'>tutor<span>Buddy</span></h2>
          <u1>
            <Link to="/"><li className ="nav-button">Home</li></Link>
@@ -24,7 +18,14 @@ function Home() {
          </u1>
         
        </nav>
-
+     </header>
+     
+     <body>
+      
+       {/* <main className="App-header">
+         <h1>Welcome to Tutor Buddy</h1>
+         <h3>So you can find a buddy so homework isn't funny</h3>
+       </main> */}
 
        <div id="tutor-carousel">
          <div className='slide-container'>
