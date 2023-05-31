@@ -23,7 +23,7 @@ function Home() {
      <body>
       
        {/* <main className="App-header">
-         <h1>Welcome to Tutor Buddy</h1>
+         <h1>Welcome to Tutor Buddy</h1>hi
          <h3>So you can find a buddy so homework isn't funny</h3>
        </main> */}
 
