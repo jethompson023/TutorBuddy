@@ -19,7 +19,6 @@
     rgb(27, 67, 83) -> #1b4353 -> dark blue
     rgb(90, 42, 39) -> #5a2a27 -> brown
     rgb(35,206,107) -> #23ce6b -> light blueish green
-
 } */
 
 .navbar{
@@ -109,6 +108,18 @@ button{
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
 
+        .slider-button{
+            border: none;
+            background: rgb(35,206,107);
+            padding: 12px 30px;
+            border-radius: 30px;
+            color: antiquewhite;
+            font-weight: bold;
+            font-size: 15px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
         .slider-section {
             display: flex;
             justify-content: center;
@@ -141,8 +152,17 @@ button{
             }
         }
 
-        
-
-
+        .slider-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 15vh;
+            scroll-snap-align: start;
+            background-color: rgb(0, 191, 255);
+        }
     }
 }
+
+
+
