@@ -8,12 +8,14 @@ import SignUp from './Forms/signUp';
 import NoPage from './404Page/404Page';
 import Tutors from './Tutors/tutors';
 import reportWebVitals from './reportWebVitals';
+import Calendar from './Calendar/CalendarPage';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
 
+        <Route path="/" element={<Calendar />}/>
         <Route path="/" element={<SignUp />}/>
         {/* <Route path="home" element={<Home />} /> */}
         <Route path="Tutors" element={<Tutors />} />
