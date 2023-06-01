@@ -32,6 +32,9 @@ function Home() {
           <section className='slider-section'>
             <h1 className='slider-h1'> Get started today</h1>
           </section>
+          <section className='slider-footer'>
+            <Link to="/Forms"><button type="submit" className='slider-button'>Sign Up</button></Link>
+          </section>
         </div>  
      </body>
    </div>
