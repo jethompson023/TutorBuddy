@@ -20,31 +20,22 @@ function Home() {
        </nav>
      </header>
      
-     <body>
-      
-       {/* <main className="App-header">
-         <h1>Welcome to Tutor Buddy</h1>
-         <h3>So you can find a buddy so homework isn't funny</h3>
-       </main> */}
-
-       <div id="tutor-carousel">
-         <div className='slide-container'>
-           <div className='slide-content'>
-               <div className='card-wrapper'>
-                   <div className='card'>
-                       <div className='image-content'>
-                           <span className='overlay'></span>
-                           <div className='card-image'>
-                               <img src="src/Tutor/profile-img/profile1.jpg" alt="" className='card-img'></img>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-         </div>
-       </div>
-      
-      
+     <body className='home-slider'>
+        <div className='container'>
+          <section className='slider-section'>
+            <h1 className='slider-h1'>Welcome to Tutor Buddy</h1>
+            {/* <h2 className='slider-h2'>Best in class tutoring</h2> */}
+          </section>
+          <section className='slider-section'>
+            <h1 className='slider-h1'>Real student Tutors</h1>
+          </section>
+          <section className='slider-section'>
+            <h1 className='slider-h1'> Get started today</h1>
+          </section>
+          <section className='slider-footer'>
+            <Link to="/Forms"><button type="submit" className='slider-button'>Sign Up</button></Link>
+          </section>
+        </div>  
      </body>
    </div>
  );
