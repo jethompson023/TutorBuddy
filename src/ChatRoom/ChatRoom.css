@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+
+.Home {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+ height: 100vh;
+ width: 100%;
+ background: linear-gradient(13deg, rgb(14, 177, 211), rgb(35, 206, 107));
+ background-size: cover;
+ background-position: center;
+}
+
+/* .all-colors{
+    rgb(210, 171, 153) -> #d2ab99 -> light brown
+    rgb(14, 177, 211) -> #0eb1d2 -> light blue 
+    rgb(27, 67, 83) -> #1b4353 -> dark blue
+    rgb(90, 42, 39) -> #5a2a27 -> brown
+    rgb(35,206,107) -> #23ce6b -> light blueish green
+} */
+
+.navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-top: 40px;
+ padding-bottom: 20px;
+ padding-left: 10%;
+ padding-right: 10%;
+}
+
+
+.logo{
+ color:antiquewhite;
+ font-size: 28px;
+}
+
+
+span{
+ color: rgb(90, 42, 39);
+}
+
+
+nav u1 li{
+ list-style-type: none;
+ display: inline-block;
+ padding: 10px 20px;
+}
+
+.nav-button{
+ color: rgb(27, 67, 83);
+ text-decoration: none;
+ font-weight: bold;
+}
+
+
+nav u1 li a:hover{
+ color:white;
+ transition: 0.3s;
+}
+
+
+.signup-button{
+ border: none;
+ background: rgb(90, 42, 39);
+ padding: 12px 30px;
+ border-radius: 30px;
+ color: white;
+ font-weight: bold;
+ font-size: 15px;
+ transition: all 0.4s ease;
+ cursor: pointer;
+}
+
+.signup-button:hover{
+    background: rgb(67, 31, 29)
+}
+
+
+.card-image{
+ position: relative;
+ height: 150px;
+ width: 150px;
+}
+
+
+.card-image .card-img{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ border-radius: 50%;
+}
+
+
+.home-slider{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: linear-gradient(13deg, rgb(14, 177, 211), rgb(35, 206, 107));
+
+    .container {
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+
+        .slider-button{
+            border: none;
+            background: rgb(35,206,107);
+            padding: 12px 30px;
+            border-radius: 30px;
+            color: antiquewhite;
+            font-weight: bold;
+            font-size: 15px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .slider-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+
+            &:nth-of-type(1)  {
+                background-color: rgb(27, 67, 83);
+                color: antiquewhite;
+            }
+    
+            &:nth-of-type(2)  {
+                background-color:  rgb(14, 177, 211);
+                color: antiquewhite;
+            }
+    
+            &:nth-of-type(3)  {
+                background-color: rgb(90, 42, 39);
+                color: antiquewhite;
+            }
+
+            .slider-h1 {
+                font-size: 10rem;
+            }
+
+            .slider-h2 {
+                font-size: 5rem;
+            }
+        }
+
+        .slider-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 15vh;
+            scroll-snap-align: start;
+            background-color: rgb(0, 191, 255);
+        }
+    }
+}
+
+
+
