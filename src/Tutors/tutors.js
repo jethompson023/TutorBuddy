@@ -1,17 +1,24 @@
 import './tutors.css';
 import { Link } from "react-router-dom";
+import { BsFilter, BsStar, BsStarFill, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import tutorImage from "./download.jfif";
+import Carousel from '@itseasy21/react-elastic-carousel';
+import React, { useState } from "react";
+import { MultiSelect } from "react-multi-select-component";
 
+// functionality for the filter dropdown options
 function showFilterDropdown() {
   var displayAttr = document.getElementById("tutor-match-filter").style.display;
 
-  if(displayAttr == "block") {
+  // when the filter button is pushed, it shows the options and moves the tutor cards down
+  //  if the options aren't already showing. Closes options and moves tutor cards back up
+  //  if the options are showing
+  if(displayAttr === "flex") {
     document.getElementById("tutor-match-filter").style.display = "none";
     document.getElementById("tutor-match-card").style.marginTop = "10px";
   } else {
-    document.getElementById("tutor-match-filter").style.display = "block";
+    document.getElementById("tutor-match-filter").style.display = "flex";
     document.getElementById("tutor-match-card").style.marginTop = "90px";
-    // document.getElementById("tutor-container").style.height = "100vh";
   }
 }
 
@@ -32,6 +39,36 @@ function showFilterDropdown() {
 // }
 
 function Tutor() {
+  //carousel: amount of tutor profile to show at once
+  const breakPoints = [
+    {width: 1, itemsToShow: 1},
+    {width: 550, itemsToShow: 2},
+    {width: 768, itemsToShow: 3},
+    {width: 1200, itemsToShow: 4},
+  ];
+
+  //Course options for filter menu
+  var courseOptions = [
+    { label: "CS-102", value: "CS-102" },
+    { label: "CS-211", value: "CS-211" },
+    { label: "CS-471", value: "CS-471"},
+    { label: "CE-210", value: "CE-210" },
+    { label: "CE-320", value: "CE-320" },
+    { label: "CE-452", value: "CE-4521"},
+    { label: "MATH-101", value: "MATH-101" },
+    { label: "MATH-102", value: "MATH-102" },
+    { label: "MATH-203", value: "MATH-203" }
+  ];
+
+  const [selected, setSelected] = useState([]);
+
+  //change default select value in course selection menu
+  const customValueRenderer = (selected, _options) => {
+    return selected.length
+      ? selected.map(({ label }) => label)
+      : "Select Course(s)";
+  };
+
   return (
     <div id="tutor-container" className="tutor-container">
         <head>
@@ -46,90 +83,180 @@ function Tutor() {
             <Link to="/Tutors"><li className ="nav-button">Tutors</li></Link>
             <Link to="/Sessions"><li className ="nav-button">Sessions</li></Link>
             <Link to="/Courses"><li className ="nav-button">Courses</li></Link>
-            <Link to="/Forms"><button type="submit">Sign Out</button></Link>
+            <Link to="/Forms"><button type="submit" className='signup-button'>Sign Out</button></Link>
             </u1>
           </nav>
         </header>
 
         <body className='tutor-body'>
+
+          
           <div className="tutor-match">
-            <button onClick={showFilterDropdown} className='filter-tutor'>Filter</button>
+            <div className="filter-tutor-header">
+            <button onClick={showFilterDropdown} className='filter-tutor'><BsFilter/></button>
+            <h1 className="find-tutor">Find your Tutor</h1>
+            </div>
+            
             <div id="tutor-match-filter" className='tutor-match-filter'>
               <form action="">
-                <select name="filter-courses" id="filter-courses">
-                  <option value="default-course">-- Courses --</option>
-                  <option value="course-cs471">CS-471</option>
-                  <option value="course-cs231">CS-231</option>
-                  <option value="course-math203">MATH-203</option>
-                  <option value="course-cs211">CS-211</option>
-                </select>
 
-                <select name="tutor-rating" id="tutor-rating">
-                  <option value="default-rating">-- Rating --</option>
-                  <option value="rating-1">1 Star</option>
-                  <option value="rating-2">2 Stars</option>
-                  <option value="rating-3">3 Stars</option>
-                  <option value="rating-4">4 Stars</option>
-                  <option value="rating-5">5 Stars</option>
-                </select>
+                <div className='filter-options'>
+                  <MultiSelect
+                    options={courseOptions}
+                    value={selected}
+                    onChange={setSelected}
+                    labelledBy="select"
+                    className='multiselect'
+                    valueRenderer={customValueRenderer}
+                  />
 
-                <br></br>
+                  <select name="tutor-rating" id="tutor-rating" className="filter-box">
+                    <option value="default-rating" className='default-option'>Any Rating</option>
+                    <option value="rating-1">Less than 1 Star</option>
+                    <option value="rating-2">1-2 Stars</option>
+                    <option value="rating-3">2-3 Stars</option>
+                    <option value="rating-4">3-4 Stars</option>
+                    <option value="rating-5">4-5 Stars</option>
+                  </select>                
 
-                <select name="tutor-experience" id="tutor-experience">
-                  <option value="default-experience">-- Experience --</option>
-                  <option value="experience-less-than-1">Less than 1 Year</option>
-                  <option value="experience-1-2">1-2 Years</option>
-                  <option value="experience-2-3">2-3 Years</option>
-                  <option value="experience-3-4">3-4 Years</option>
-                  <option value="experience-more-than-4">More than 5 Years</option>
-                </select>
+                  <select name="tutor-experience" id="tutor-experience" className="filter-box">
+                    <option value="default-experience" className='default-option'>Any Experience</option>
+                    <option value="experience-less-than-1">Less than 1 Year</option>
+                    <option value="experience-1-2">1-2 Years</option>
+                    <option value="experience-2-3">2-3 Years</option>
+                    <option value="experience-3-4">3-4 Years</option>
+                    <option value="experience-more-than-4">More than 5 Years</option>
+                  </select>
 
-                <select name="tutor-credentials" id="tutor-credentials">
-                  <option value="default-credentials">-- Credentials --</option>
-                  <option value="credentials-certification">Basic Certifications</option>
-                  <option value="credentials-advanced-certification">Advanced Certifications</option>
-                  <option value="credentials-bachelors">Bachelor's Degree</option>
-                  <option value="credentials-masters">Master's Degree</option>
-                </select>
+                  <select name="tutor-credentials" id="tutor-credentials" className="filter-box">
+                    <option value="default-credentials" className='default-option'>Any Credentials</option>
+                    <option value="credentials-certification">Basic Certifications</option>
+                    <option value="credentials-advanced-certification">Advanced Certifications</option>
+                    <option value="credentials-bachelors">Bachelor's Degree</option>
+                    <option value="credentials-masters">Master's Degree</option>
+                  </select>
 
-                <br></br>
+                  <br></br>
+                  
 
-                <input type="submit" value="Filter"></input>
-                <input type="submit" value="Auto Match Me"></input>
+                  <input type="submit" value="Apply Filter" className='filter-submit'></input>
+                  <input type="submit" value="Auto Match Me" className='filter-submit'></input>
+                  </div>
               </form>
             </div>
+            
+              <section>
+                <div className='tutor-card-container'>
+                  <div className='tutor-content'>
+                    <Carousel breakPoints={breakPoints} className='tutor-carousel'>
+                      <div className='tutor-card'>
+                        <div className='tutor-card-content'>
+                          <div className='tutor-image'>
+                            <img src={tutorImage} alt="Tutor Face"></img>
+                          </div>
 
-            <div id="tutor-match-card" className='tutor-match-card'>
+                          <div className='tutor-name-profession'>
+                            <span className='tutor-name'>Tutor Name</span>
+                            <span className='tutor-profession'>Tutor</span>
+                          </div>
 
-              <div className='tutor-img-container'>
-                <img src={tutorImage} alt="Tutor" className='tutor-image'/>
-                
-                <div className='tutor-card-bio'>
-                  <div className='tutor-card-name'> Name </div>
-                  Rating 
-                  <br></br> Experience
-                  <br></br> Courses Tutoring
+                          <div className='media-icons'>
+                            <i><BsFacebook/></i>
+                            <i><BsTwitter/></i>
+                            <i><BsLinkedin/></i>
+                          </div>
+
+                          <div className='tutor-rating'>
+                            <i><BsStarFill/></i>
+                            <i><BsStarFill/></i>
+                            <i><BsStarFill/></i>
+                            <i><BsStar/></i>
+                            <i><BsStar/></i>
+                          </div>
+
+                          <div className='card-button'>
+                            <button className='about-tutor'>About</button>
+                            <button className='contact-tutor'>Contact</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className='tutor-card'>
+                        <div className='tutor-card-content'>
+                          <div className='tutor-image'>
+                            <img src={tutorImage} alt="Tutor Face"></img>
+                          </div>
+
+                          <div className='tutor-name-profession'>
+                            <span className='tutor-name'>Tutor Name</span>
+                            <span className='tutor-profession'>Tutor</span>
+                          </div>
+
+                          <div className='media-icons'>
+                            <i><BsFacebook/></i>
+                            <i><BsTwitter/></i>
+                            <i><BsLinkedin/></i>
+                          </div>
+
+                          <div className='tutor-rating'>
+                            <i><BsStarFill/></i>
+                            <i><BsStarFill/></i>
+                            <i><BsStarFill/></i>
+                            <i><BsStar/></i>
+                            <i><BsStar/></i>
+                          </div>
+
+                          <div className='card-button'>
+                            <button className='about-tutor'>About</button>
+                            <button className='contact-tutor'>Contact</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className='tutor-card'>
+                        <div className='tutor-card-content'>
+                          <div className='tutor-image'>
+                            <img src={tutorImage} alt="Tutor Face"></img>
+                          </div>
+
+                          <div className='tutor-name-profession'>
+                            <span className='tutor-name'>Tutor Name</span>
+                            <span className='tutor-profession'>Tutor</span>
+                          </div>
+
+                          <div className='media-icons'>
+                            <i><BsFacebook/></i>
+                            <i><BsTwitter/></i>
+                            <i><BsLinkedin/></i>
+                          </div>
+
+                          <div className='tutor-rating'>
+                            <i><BsStarFill/></i>
+                            <i><BsStarFill/></i>
+                            <i><BsStarFill/></i>
+                            <i><BsStar/></i>
+                            <i><BsStar/></i>
+                          </div>
+
+                          <div className='card-button'>
+                            <button className='about-tutor'>About</button>
+                            <button className='contact-tutor'>Contact</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </Carousel>
+                  </div>
                 </div>
-              </div>
-
-              {/* <div className='tutor-card-ratings'> 
-                <div className='Rating'>
-                  
-                </div>
-              </div> */}
-
-              <div className='tutor-button-containers'>
-                <button className='tutor-card-reject'>Reject</button>
-                <button className='tutor-card-accept'>Match</button>
-              </div>
-                
-            </div>
+              </section>
+            
 
           </div>
 
           <div className="users-tutors">
             <form action="">
-              <input type="search" name="user-tutor-search" id="user-tutor-search" placeholder="Search for tutors..."></input>
+              <input type="search" name="user-tutor-search" id="user-tutor-search" 
+                className="search-box" placeholder="Search for tutors..."></input>
             </form>
           </div>
 

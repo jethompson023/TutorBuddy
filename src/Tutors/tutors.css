@@ -8,11 +8,11 @@
 }
 
 .tutor-container {
-  /* height: 100vh; */
-  /* width: 100%; */
-  background: linear-gradient(13deg, rgb(14, 177, 211), rgb(35, 206, 107));
-  background-size: cover;
+  height: 1000px; 
+  width: 100%; 
+  background-image: linear-gradient(13deg, rgb(14, 177, 211), rgb(35, 206, 107));
   background-position: center;
+  min-width: 1060px;
  }
 
  .tutor-body{
@@ -25,86 +25,249 @@
   background-size: cover;
  }
 
- .tutor-match-filter {
-  display: none;
-  position: absolute;
-  margin-top: 5px;
+ .tutor-match{
+  width: 45%;
+ }
+
+ .filter-tutor-header{
+  display: flex; 
+  justify-content: center;
+ }
+
+ .tutor-match .find-tutor{
+  color:antiquewhite;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+ }
+
+
+ input {
+  cursor: pointer;
 }
 
-.tutor-match-card {
-  margin: 10px 0px;
-  position: relative;
+.search-box{
+  cursor: text;
+}
+
+.tutor-match-filter {
+display: none;
+position: relative;
+margin-top: 5px;
+flex-direction: row;
+margin: 5% 4%;
+border-color:rgb(66, 31, 29);
+border-width: 10px;
+justify-content: center;
+}
+
+.filter-options{
+  margin-left: 10%;
+  padding: 1% 5%;
+  background-color: lightgray;
+  border-radius: 10px;
+  border-color: lightgray;
+  border-style:inset;
+  border-width: 10px;
+}
+
+.multiselect{
+  display: block;
+  position:relative;
+  z-index: 2;
+  width: 75%;
+  box-shadow: 5px 5px 8px #888888;
+  margin-bottom: 2%;
+}
+
+.filter-courses{
+  height: 4rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.filter-box{
+  font-size: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 1% 5% 1% 0%;
+  border-color: lightgray;
+  box-shadow: 5px 5px 8px #888888;
+}
+
+.filter-submit {
+  background: rgb(90, 42, 39);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  margin: 3% 2% 0% 2%;
+}
+
+button.filter-tutor {
+  border: none;
+  background: rgb(90, 42, 39);
+  padding: 8px 15px;
+  border-radius: 10px;
   color: white;
+  font-size: 25px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button.filter-tutor:hover{
+  background: rgb(67, 31, 29)
+}
+
+.users-tutor {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+section .tutor-card .tutor-image {
+  width: 140px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 3px;
+  background: rgb(90, 42, 39);
+}
+
+section .tutor-card .tutor-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #eff;
+}
+
+.tutor-card{
+  background: #fff;
+  border-radius: 20px;
+  margin: 28px;
+  width: 280px;
+}
+
+.tutor-card .tutor-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.tutor-card .media-icons{
+  position: absolute;
+  top: 10px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tutor-img-container {
-  border-radius: 10px;
-  background-color: black;
-  position: relative;
-  height: 300px;
-  width: 250px;
-}
-
-img.tutor-image{
-  border-radius: 10px;
-  background-color: black;
-  position: absolute;
-  height: 300px;
-  width: 250px;
-}
-
-.tutor-card-bio {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-left: 5px;
-  width: 100%;
-  font-size: 13px;
-}
-
-.tutor-card-name {
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.tutor-button-containers{
-  display: flex
-}
-
-.tutor-card-reject {
-  background-color: Red;
+.tutor-card .media-icons i{
+  color: rgb(90, 42, 39);
   margin-top: 10px;
-  border-radius: 10px;
-  margin-right: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.tutor-card-accept {
-  background-color: green;
-  margin-top: 10px;
-  border-radius: 10px;
-  
+.tutor-card .media-icons i:hover{
+  opacity: 1;
 }
 
-.tutor-card-ratings{
-  background-color: grey;
-  width: 250px;
-  height: 75px;
-  position: absolute;
-}
-
-button.filter-tutor {
-  padding: 8px 15px;
-  border-radius: 10px;
-}
-
-.users-tutor {
-  display: inline-block;
-  /* position: absolute; */
+.tutor-card .tutor-name-profession{
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-top: 10px;
+  color: #333;
+}
+
+.tutor-card .tutor-name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tutor-card .tutor-profession{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.tutor-card .tutor-rating{
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.tutor-card .tutor-rating i{
+  font-size: 18px;
+  margin: 0 2px;
+  color: rgb(90, 42, 39);
+}
+
+.tutor-card .card-button{
+  width: 100%;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  margin-top: 20px;
+
+  border: none;
+  background: none;
+  padding: 0; 
+  border-radius: 0; 
+  color: none; 
+  font-weight: bold; 
+  font-size: normal;
+}
+
+.tutor-card .card-button button{
+  background: rgb(90, 42, 39);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  margin: 0 2%;
+}
+
+.card-button button:hover{
+  background: rgb(66, 31, 29);
+}
+
+
+/* to change the default carousel colors */
+.tutor-carousel {
+  width: 200px;
+}
+
+.sc-aXZVg.iWchow.rec.rec-arrow.rec:hover{
+  background-color:rgb(90, 42, 39)
+}
+
+.sc-aXZVg.iWchow.rec.rec-arrow.rec:focus:enabled{
+  background-color:rgb(90, 42, 39)
+}
+
+.sc-gsFSXq.vUlQj.rec.rec-dot.rec-dot_active{
+  background-color:rgb(90, 42, 39);
+  box-shadow:rgb(94, 62, 59) 0px 0px 1px 3px;
+}
+
+.sc-gsFSXq.iNpnDY.rec.rec-dot:hover{
+  box-shadow:rgb(90, 57, 54) 0px 0px 1px 3px;
 }

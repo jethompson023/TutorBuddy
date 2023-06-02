@@ -62,7 +62,7 @@ nav u1 li a:hover{
 }
 
 
-button{
+.signup-button{
  border: none;
  background: rgb(90, 42, 39);
  padding: 12px 30px;
@@ -70,8 +70,12 @@ button{
  color: white;
  font-weight: bold;
  font-size: 15px;
- transition: 0.4s;
+ transition: all 0.4s ease;
  cursor: pointer;
+}
+
+.signup-button:hover{
+    background: rgb(67, 31, 29)
 }
 
 
