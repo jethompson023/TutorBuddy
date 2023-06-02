@@ -7,6 +7,7 @@ import Home from './Home/HomePage';
 import SignUp from './Forms/signUp';
 import NoPage from './404Page/404Page';
 import Tutors from './Tutors/tutors';
+import ChatRoom from './ChatRoom/ChatRoom';
 import reportWebVitals from './reportWebVitals';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="Forms" element={<SignUp />}/>
         <Route path="Tutors" element={<Tutors />} />
+        <Route path="ChatRoom" element={<ChatRoom />} />
         <Route path="*" element={<NoPage />} />
 
       </Routes>
