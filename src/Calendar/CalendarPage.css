@@ -1,17 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     background: linear-gradient(13deg, rgb(67, 124, 136), rgb(35, 206, 107));
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .calendar-container {
-    height: 80vh;
-    width: 80vw;
+    height: 90vh;
+    width: 90vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +23,6 @@ body {
     max-width: 100%;
     background: white;
     border: 1px solid #a0a096;
-    /* font-family: 'Poppins', sans-serif; */
     line-height: 1.125em;
   }
   
@@ -96,7 +95,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* font-family: 'Poppins', sans-serif; */
     font-size: 0.75em;
     font-weight: bold;
   }
