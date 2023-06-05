@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(13deg, rgb(67, 124, 136), rgb(35, 206, 107));
     height: 80vh;
     display: flex;
