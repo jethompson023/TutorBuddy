@@ -10,6 +10,7 @@ import Tutors from './Tutors/tutors';
 import Course from './Courses/Courses';
 import ChatRoom from './ChatRoom/ChatRoom';
 import reportWebVitals from './reportWebVitals';
+import Calendar from 'react-calendar';
 
 export default function App() {
   return (
