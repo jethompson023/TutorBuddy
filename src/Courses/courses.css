@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.course-container {
+  height: 1000px; 
+  width: 100%; 
+  background-image: linear-gradient(13deg, rgb(14, 177, 211), rgb(35, 206, 107));
+  background-position: center;
+  min-width: 1060px;
+ }
+
+ .course-body{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100vh;
+  background-size: cover;
+ }
+
+ .course-match{
+  width: 45%;
+ }
+
+ .filter-course-header{
+  display: flex; 
+  justify-content: center;
+ }
+
+ .course-match .find-course{
+  color:antiquewhite;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+ }
+
+
+ input {
+  cursor: pointer;
+}
+
+.search-box{
+  cursor: text;
+}
+
+.course-match-filter {
+display: none;
+position: relative;
+margin-top: 5px;
+flex-direction: row;
+margin: 5% 4%;
+border-color:rgb(66, 31, 29);
+border-width: 10px;
+justify-content: center;
+}
+
+.filter-options{
+  margin-left: 10%;
+  padding: 1% 5%;
+  background-color: lightgray;
+  border-radius: 10px;
+  border-color: lightgray;
+  border-style:inset;
+  border-width: 10px;
+}
+
+.multiselect{
+  display: block;
+  position:relative;
+  z-index: 2;
+  width: 75%;
+  box-shadow: 5px 5px 8px #888888;
+  margin-bottom: 2%;
+}
+
+.filter-courses{
+  height: 4rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.filter-box{
+  font-size: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 1% 5% 1% 0%;
+  border-color: lightgray;
+  box-shadow: 5px 5px 8px #888888;
+}
+
+.filter-submit {
+  background: rgb(90, 42, 39);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  margin: 3% 2% 0% 2%;
+}
+
+button.filter-course {
+  border: none;
+  background: rgb(90, 42, 39);
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button.filter-course:hover{
+  background: rgb(67, 31, 29)
+}
+
+.users-course {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+section .course-card .course-image {
+  width: 140px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 3px;
+  background: rgb(90, 42, 39);
+}
+
+section .course-card .course-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #eff;
+}
+
+.course-card{
+  background: #fff;
+  border-radius: 20px;
+  margin: 28px;
+  width: 280px;
+}
+
+.course-card .course-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.course-card .media-icons{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course-card .media-icons i{
+  color: rgb(90, 42, 39);
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card .media-icons i:hover{
+  opacity: 1;
+}
+
+.course-card .course-name-profession{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: #333;
+}
+
+.course-card .course-name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.course-card .course-profession{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.course-card .course-rating{
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.course-card .course-rating i{
+  font-size: 18px;
+  margin: 0 2px;
+  color: rgb(90, 42, 39);
+}
+
+.course-card .card-button{
+  width: 100%;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  margin-top: 20px;
+
+  border: none;
+  background: none;
+  padding: 0; 
+  border-radius: 0; 
+  color: none; 
+  font-weight: bold; 
+  font-size: normal;
+}
+
+.course-card .card-button button{
+  background: rgb(90, 42, 39);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  margin: 0 2%;
+}
+
+.card-button button:hover{
+  background: rgb(66, 31, 29);
+}
+
+
+/* to change the default carousel colors */
+.course-carousel {
+  width: 200px;
+}
+
+.sc-aXZVg.iWchow.rec.rec-arrow.rec:hover{
+  background-color:rgb(90, 42, 39)
+}
+
+.sc-aXZVg.iWchow.rec.rec-arrow.rec:focus:enabled{
+  background-color:rgb(90, 42, 39)
+}
+
+.sc-gsFSXq.vUlQj.rec.rec-dot.rec-dot_active{
+  background-color:rgb(90, 42, 39);
+  box-shadow:rgb(94, 62, 59) 0px 0px 1px 3px;
+}
+
+.sc-gsFSXq.iNpnDY.rec.rec-dot:hover{
+  box-shadow:rgb(90, 57, 54) 0px 0px 1px 3px;
+}
