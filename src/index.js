@@ -10,11 +10,13 @@ import Tutors from './Tutors/tutors';
 import Course from './Courses/Courses';
 import ChatRoom from './ChatRoom/ChatRoom';
 import reportWebVitals from './reportWebVitals';
+import Calendar from 'react-calendar';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Calendar />} />
         <Route path="/" element={<Home />} />
         <Route path="Forms" element={<SignUp />}/>
         <Route path="Tutors" element={<Tutors />} />
