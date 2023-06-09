@@ -21,6 +21,46 @@
     rgb(35,206,107) -> #23ce6b -> light blueish green
 } */
 
+.navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-top: 40px;
+ padding-bottom: 20px;
+ padding-left: 10%;
+ padding-right: 10%;
+}
+
+
+.logo{
+ color:antiquewhite;
+ font-size: 28px;
+}
+
+
+span{
+ color: rgb(90, 42, 39);
+}
+
+
+nav u1 li{
+ list-style-type: none;
+ display: inline-block;
+ padding: 10px 20px;
+}
+
+.nav-button{
+ color: rgb(27, 67, 83);
+ text-decoration: none;
+ font-weight: bold;
+}
+
+
+nav u1 li a:hover{
+ color:white;
+ transition: 0.3s;
+}
+
 
 .signup-button{
  border: none;
@@ -53,6 +93,12 @@
  border-radius: 50%;
 }
 
+
+/* #tutor-carousel{
+ background: #fff;
+ border-radius: 2px;
+ border-radius: 10px 140px 30px 140px; 
+} */
 
 .home-slider{
     width: 100vw;

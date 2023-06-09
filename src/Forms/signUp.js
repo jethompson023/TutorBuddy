@@ -1,5 +1,6 @@
 import './signUp.css';
 import { Link } from "react-router-dom";
+import { FcGoogle} from 'react-icons/fc';
 
 function SignUp() {
   return (
@@ -16,19 +17,22 @@ function SignUp() {
 
           {/* <form action="signUp.php"method="post"> */}
           <form className="signUp-form" action="">  
-            <input type="text" name="email" placeholder="Email" className="text-box-input"></input> 
-            <br /><br />
+            <input type="text" name="email" placeholder="Email" className="text-box-input"></input>
             <input type="password" name="password" placeholder="Password" className="text-box-input"></input>
+            <input type="password" name='confirm-password' placeholder="Confirm Password" className="text-box-input"></input>
+            <select className='role-box'>
+              <option value="">What's your role?</option>
+              <option value="paris">Student</option>
+              <option value="Tutor">Tutor</option>
+              <option value="Admin">Admin</option>
+            </select>
             <br /><br />
-            <input type="checkbox" name="remember-me"></input>
-            <label> Remember Me </label>
-            <br /><br />
-            <Link to="/"><button type="submit" className="general-button">Sign Up</button></Link>
+            <Link to="/Home"><button type="submit" className="general-button">Sign Up</button></Link>
             
-            <div className="password-box"><Link to=""> <h1 className="link-password">Forgot Password?</h1></Link></div>
+            <div className="account-already"><Link to="/SignIn"> <h1 className="link-password">Already Have An Account?</h1></Link></div>
             <hr/>
             <br />
-            <Link to="" ><button className="general-button">Sign Up with Google</button></Link>
+            <Link to="" ><button className="general-button">Sign Up with <FcGoogle/></button></Link>
           </form>
 
           <footer className="footer-signUp">

@@ -29,109 +29,6 @@
   width: 45%;
  }
 
- .filter-course-header{
-  display: flex; 
-  justify-content: center;
- }
-
- .course-match .find-course{
-  color:antiquewhite;
-  display: flex;
-  justify-content: space-around;
-  margin-left: 5%;
- }
-
-
- input {
-  cursor: pointer;
-}
-
-.search-box{
-  cursor: text;
-}
-
-.course-match-filter {
-display: none;
-position: relative;
-margin-top: 5px;
-flex-direction: row;
-margin: 5% 4%;
-border-color:rgb(66, 31, 29);
-border-width: 10px;
-justify-content: center;
-}
-
-.filter-options{
-  margin-left: 10%;
-  padding: 1% 5%;
-  background-color: lightgray;
-  border-radius: 10px;
-  border-color: lightgray;
-  border-style:inset;
-  border-width: 10px;
-}
-
-.multiselect{
-  display: block;
-  position:relative;
-  z-index: 2;
-  width: 75%;
-  box-shadow: 5px 5px 8px #888888;
-  margin-bottom: 2%;
-}
-
-.filter-courses{
-  height: 4rem;
-  width: 10rem;
-  cursor: pointer;
-}
-
-.filter-box{
-  font-size: 15px;
-  border-radius: 7px;
-  cursor: pointer;
-  margin: 1% 5% 1% 0%;
-  border-color: lightgray;
-  box-shadow: 5px 5px 8px #888888;
-}
-
-.filter-submit {
-  background: rgb(90, 42, 39);
-  outline: none;
-  border: none;
-  color: #fff;
-  padding: 8px 22px;
-  border-radius: 20px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  cursor:pointer;
-  margin: 3% 2% 0% 2%;
-}
-
-button.filter-course {
-  border: none;
-  background: rgb(90, 42, 39);
-  padding: 8px 15px;
-  border-radius: 10px;
-  color: white;
-  font-size: 25px;
-  transition: all 0.4s ease;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-button.filter-course:hover{
-  background: rgb(67, 31, 29)
-}
-
-.users-course {
-  display: inline-block;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
 
 section .course-card .course-image {
   width: 140px;
@@ -248,7 +145,6 @@ section .course-card .course-image img{
 .card-button button:hover{
   background: rgb(66, 31, 29);
 }
-
 
 /* to change the default carousel colors */
 .course-carousel {

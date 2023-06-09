@@ -11,12 +11,12 @@ function ChatRoom() {
       <nav className="navbar">
          <h2 className='logo'>tutor<span>Buddy</span></h2>
          <u1>
-           <Link to="/"><li className ="nav-button">Home</li></Link>
+           <Link to="Home"><li className ="nav-button">Home</li></Link>
            <Link to="/Tutors"><li className ="nav-button">Tutors</li></Link>
            <Link to="/Sessions"><li className ="nav-button">Sessions</li></Link>
            <Link to="/Courses"><li className ="nav-button">Courses</li></Link>
            <Link to="/ChatRoom"><li className ="nav-button">ChatRoom</li></Link>
-           <Link to="/Forms"><button type="submit" className="signup-button">Sign Up</button></Link>
+           <Link to="/SignIn"><button type="submit" className="signup-button">Sign Out</button></Link>
          </u1>
         
        </nav>

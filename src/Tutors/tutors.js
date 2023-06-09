@@ -1,9 +1,10 @@
 import './tutors.css';
 import { Link } from "react-router-dom";
 import { BsFilter, BsStar, BsStarFill, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
+import { FaUserAlt } from "react-icons/fa";
 import tutorImage from "./download.jfif";
 import Carousel from '@itseasy21/react-elastic-carousel';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MultiSelect } from "react-multi-select-component";
 
 // functionality for the filter dropdown options
@@ -39,6 +40,34 @@ function showFilterDropdown() {
 // }
 
 function Tutor() {
+  const [tutors, setTutorName, setTutorRating, setUserEmail] = useState([]);
+
+
+  const getTutors = async () => {
+    const tutorResponse = await fetch("https://onlinetutoring.thetechnician94.com/API/api.php/records/Tutors");
+    const tutorData = await tutorResponse.json();
+
+    // const ratingResponse = await fetch("https://onlinetutoring.thetechnician94.com/API/api.php/records/Ratings");
+    // const tutorRating = await ratingResponse.json();
+
+    // const userResponse = await fetch("https://onlinetutoring.thetechnician94.com/API/api.php/records/Users");
+    // const userData = await userResponse.json();
+
+
+    setTutorName(tutorData["records"]);
+
+    // setTutorRating(tutorRating["records"]); //needs userID to get correct tutor rating
+
+    // setUserEmail(userData["records"]); 
+    
+  }
+
+  useEffect(() => {
+    getTutors();
+  }, [])
+
+
+
   //carousel: amount of tutor profile to show at once
   const breakPoints = [
     {width: 1, itemsToShow: 1},
@@ -65,7 +94,7 @@ function Tutor() {
   //change default select value in course selection menu
   const customValueRenderer = (selected, _options) => {
     return selected.length
-      ? selected.map(({ label }) => label)
+      ? selected.map(({ label }) => label + ", ")
       : "Select Course(s)";
   };
 
@@ -79,12 +108,12 @@ function Tutor() {
           <nav className="navbar">
             <h2 className='logo'>tutor<span>Buddy</span></h2>
             <u1>
-            <Link to="/"><li className ="nav-button">Home</li></Link>
+            <Link to="/Home"><li className ="nav-button">Home</li></Link>
             <Link to="/Tutors"><li className ="nav-button">Tutors</li></Link>
             <Link to="/Sessions"><li className ="nav-button">Sessions</li></Link>
             <Link to="/Courses"><li className ="nav-button">Courses</li></Link>
             <Link to="/ChatRoom"><li className ="nav-button">ChatRoom</li></Link>
-            <Link to="/Forms"><button type="submit" className='signup-button'>Sign Out</button></Link>
+            <Link to="/SignIn"><button type="submit" className='signup-button'>Sign Out</button></Link>
             </u1>
           </nav>
         </header>
@@ -150,102 +179,43 @@ function Tutor() {
                 <div className='tutor-card-container'>
                   <div className='tutor-content'>
                     <Carousel breakPoints={breakPoints} className='tutor-carousel'>
-                      <div className='tutor-card'>
-                        <div className='tutor-card-content'>
-                          <div className='tutor-image'>
-                            <img src={tutorImage} alt="Tutor Face"></img>
-                          </div>
+                      {/* {tutors && tutors.length > 0 && tutors.map((tutor, index) => ( */}
+                        <div className='tutor-card'>
+                          <div className='tutor-card-content'>
+                            <div className='tutor-image'>
+                              {/* <FontAwesomeIcon icon="fa-solid fa-user" /> */}
+                              {/* <img src={<FaUserAlt/>} alt="Tutor Face"></img> */}
+                              <i><FaUserAlt size={28} /></i>
+                            </div>
 
-                          <div className='tutor-name-profession'>
-                            <span className='tutor-name'>Tutor Name</span>
-                            <span className='tutor-profession'>Tutor</span>
-                          </div>
+                            {/* <div className='tutor-name-profession' key={tutor.ID}> */}
+                              {/* <span className='tutor-name'>{tutor.Name}</span> */}
+                            <div className='tutor-name-profession'>
+                              <span className='tutor-name'>Tutor Name</span>
+                              <span className='tutor-profession'>Tutor</span>
+                            </div>
 
-                          <div className='media-icons'>
-                            <i><BsFacebook/></i>
-                            <i><BsTwitter/></i>
-                            <i><BsLinkedin/></i>
-                          </div>
+                            <div className='media-icons'>
+                              <i><BsFacebook/></i>
+                              <i><BsTwitter/></i>
+                              <i><BsLinkedin/></i>
+                            </div>
 
-                          <div className='tutor-rating'>
-                            <i><BsStarFill/></i>
-                            <i><BsStarFill/></i>
-                            <i><BsStarFill/></i>
-                            <i><BsStar/></i>
-                            <i><BsStar/></i>
-                          </div>
+                            <div className='tutor-rating'>
+                              <i><BsStarFill/></i>
+                              <i><BsStarFill/></i>
+                              <i><BsStarFill/></i>
+                              <i><BsStar/></i>
+                              <i><BsStar/></i>
+                            </div>
 
-                          <div className='card-button'>
-                            <button className='about-tutor'>About</button>
-                            <button className='contact-tutor'>Contact</button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className='tutor-card'>
-                        <div className='tutor-card-content'>
-                          <div className='tutor-image'>
-                            <img src={tutorImage} alt="Tutor Face"></img>
-                          </div>
-
-                          <div className='tutor-name-profession'>
-                            <span className='tutor-name'>Tutor Name</span>
-                            <span className='tutor-profession'>Tutor</span>
-                          </div>
-
-                          <div className='media-icons'>
-                            <i><BsFacebook/></i>
-                            <i><BsTwitter/></i>
-                            <i><BsLinkedin/></i>
-                          </div>
-
-                          <div className='tutor-rating'>
-                            <i><BsStarFill/></i>
-                            <i><BsStarFill/></i>
-                            <i><BsStarFill/></i>
-                            <i><BsStar/></i>
-                            <i><BsStar/></i>
-                          </div>
-
-                          <div className='card-button'>
-                            <button className='about-tutor'>About</button>
-                            <button className='contact-tutor'>Contact</button>
+                            <div className='card-button'>
+                              <button className='about-tutor'>About</button>
+                              <button className='contact-tutor'>Contact</button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-
-                      <div className='tutor-card'>
-                        <div className='tutor-card-content'>
-                          <div className='tutor-image'>
-                            <img src={tutorImage} alt="Tutor Face"></img>
-                          </div>
-
-                          <div className='tutor-name-profession'>
-                            <span className='tutor-name'>Tutor Name</span>
-                            <span className='tutor-profession'>Tutor</span>
-                          </div>
-
-                          <div className='media-icons'>
-                            <i><BsFacebook/></i>
-                            <i><BsTwitter/></i>
-                            <i><BsLinkedin/></i>
-                          </div>
-
-                          <div className='tutor-rating'>
-                            <i><BsStarFill/></i>
-                            <i><BsStarFill/></i>
-                            <i><BsStarFill/></i>
-                            <i><BsStar/></i>
-                            <i><BsStar/></i>
-                          </div>
-
-                          <div className='card-button'>
-                            <button className='about-tutor'>About</button>
-                            <button className='contact-tutor'>Contact</button>
-                          </div>
-                        </div>
-                      </div>
-
+                      {/* ))} */}
                     </Carousel>
                   </div>
                 </div>
