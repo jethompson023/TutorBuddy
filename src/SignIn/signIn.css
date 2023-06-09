@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.link-home{
+  text-decoration: none;
+  margin-left: 0%;
+}
+
+.signUp-body{
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  align-items: center;
+  background: linear-gradient(13deg, rgb(67, 124, 136), rgb(35, 206, 107));
+}
+
+.logo-group{
+  transform: scale(1.1);
+  margin-left: 15%;
+  margin-right: 5%;
+  position: relative;
+}
+
+.logo-name{
+  color:antiquewhite;
+  font-size: 48px;
+  margin-right: 15%;
+}
+
+.logo-buddy{
+  color: rgb(90, 42, 39);
+}
+
+.logo-subtitle{
+  font-size: 15px;
+  color: #3b3d40;
+}
+
+.signUp-form {
+  float: left;
+  margin: auto;
+  background: #fefeff;
+  position: relative;
+  padding: 20px;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px 0px grey;
+  width: 525px; 
+  margin-right: 10%;
+}
+
+.text-box-input {
+  border: none;
+  width: 100%;
+  background: #fefeff;
+  padding-left: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  font-size: 15px;
+  transition: 0.4s;
+  cursor: text;
+}
+
+.general-button {
+  border: none;
+  background: rgb(90, 42, 39);
+  padding: 8px 30px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.general-button:hover {
+  background-color: rgb(77, 36, 34);
+  color: white;
+}
+
+.password-box{
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.signin-bottom-buttons-group{
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.signin-bottom-buttons{
+  border: none;
+  background: rgb(90, 42, 39);
+  padding: 8px 30px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 12.5px;
+  cursor: pointer;
+  /* width: 100%; */
+  width: 175px;
+}
+
+.link-password {
+  font-size: 15px;
+}
+
+.footer-signUp {
+  height: 65px;
+  background: rgb(90, 42, 39);
+  color: antiquewhite;
+  padding: 15px;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .signUp-body{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signUp-form{
+    background: #fefeff;
+    transform: scale(0.9);
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+
+  .logo-group{
+    margin: 2% auto 0% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-name{
+    margin: auto;
+  }
+
+  .signin-bottom-buttons{
+    width: 225px;
+    font-size: 15px;
+  }
+
+}
