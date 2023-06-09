@@ -24,6 +24,10 @@
   background: linear-gradient(13deg, rgb(67, 124, 136), rgb(35, 206, 107));
 }
 
+.signUp-form input{
+  margin-bottom: 2%;
+}
+
 .logo-group{
   transform: scale(1.1);
   margin-left: 15%;
@@ -75,6 +79,15 @@
   transition: 0.4s;
 }
 
+.role-box{
+  font-size: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 1% 5% 1% 0%;
+  padding: 5px 3px;
+  /* border-color: lightgray; */
+}
+
 .general-button {
   border: none;
   background: rgb(90, 42, 39);
@@ -93,15 +106,12 @@
   color: white;
 }
 
-.password-box{
+.account-already{
   display: flex;
-  margin: 2% 0% 0% 35%;
+  margin: 10px 0;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
-}
-
-.link-password {
-  font-size: 15px;
 }
 
 .footer-signUp {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
 *{
   margin: 0;
@@ -142,12 +142,14 @@ section .tutor-card .tutor-image {
   background: rgb(90, 42, 39);
 }
 
-section .tutor-card .tutor-image img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #eff;
+section .tutor-card .tutor-image svg{
+  display: flex;
+  position: relative;
+  height: 75%;
+  width: 75%;
+  color: white;
+  margin-left: 17px;
+  margin-top: 10px;
 }
 
 .tutor-card{
@@ -219,7 +221,6 @@ section .tutor-card .tutor-image img{
 .tutor-card .card-button{
   width: 100%;
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-around;
   margin-top: 20px;
 
@@ -250,7 +251,7 @@ section .tutor-card .tutor-image img{
 }
 
 
-/* to change the default carousel colors */
+to change the default carousel colors
 .tutor-carousel {
   width: 200px;
 }
@@ -270,4 +271,4 @@ section .tutor-card .tutor-image img{
 
 .sc-gsFSXq.iNpnDY.rec.rec-dot:hover{
   box-shadow:rgb(90, 57, 54) 0px 0px 1px 3px;
-}
+} */
